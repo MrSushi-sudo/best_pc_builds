@@ -15,11 +15,11 @@
 - `users` - пользовательское приложение
 
 ## Запуск проекта
-uv venv - создать окружение
-uv install - установка пакетов
-uv sync - синхронизация окружения
-python manage.py runbolt --dev --host 127.0.0.1 --port 8000 - запуск локально в дев режиме
-python manage.py runbolt --processes 4 --workers 2 - запуск в прод режиме
+- `uv venv` - создать окружение
+- `uv install` - установка пакетов
+- `uv sync` - синхронизация окружения
+- `python manage.py runbolt --dev --host 127.0.0.1 --port 8000` - запуск локально в дев режиме
+- `python manage.py runbolt --processes 4 --workers 2` - запуск в прод режиме
 
 ## Запуск тестов
 ```
