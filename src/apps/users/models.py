@@ -6,9 +6,9 @@ class BaseUser(AbstractUser):
     """Модель пользователя"""
 
     class Meta:
-        verbose_name = _('Пользователь')
-        verbose_name_plural = _('Пользователи')
-        ordering = ('-date_joined',)
+        verbose_name = _("Пользователь")
+        verbose_name_plural = _("Пользователи")
+        ordering = ("-date_joined",)
 
     def __str__(self) -> str:
         return self.get_username()
@@ -19,5 +19,5 @@ class BaseGroup(Group):
 
     class Meta:
         proxy = True
-        verbose_name = _('Группа')
-        verbose_name_plural = _('Группы')
+        verbose_name = _("Группа")
+        verbose_name_plural = _("Группы")

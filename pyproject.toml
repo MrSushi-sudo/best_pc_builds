@@ -14,3 +14,18 @@ dependencies = [
     "psycopg>=3.3.3",
     "uuid6>=2025.0.1",
 ]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+    "ruff>=0.15.9",
+]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 129
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]

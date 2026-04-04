@@ -8,13 +8,8 @@ from apps.users.models import BaseGroup, BaseUser
 @admin.register(BaseUser)
 class BaseUserAdmin(UserAdmin):
     """Админка пользователей"""
-    list_display = (
-        '__str__',
-        'email',
-        'is_active',
-        'is_staff',
-        'date_joined'
-    )
+
+    list_display = ("__str__", "email", "is_active", "is_staff", "date_joined")
 
 
 admin.site.unregister(Group)

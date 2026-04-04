@@ -50,4 +50,3 @@ class ComputerCaseAdmin(admin.ModelAdmin):
 @admin.register(CoolingSystem)
 class CoolingSystemAdmin(admin.ModelAdmin):
     pass
-

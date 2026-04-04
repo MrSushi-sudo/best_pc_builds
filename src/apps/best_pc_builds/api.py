@@ -5,6 +5,6 @@ from config.components.bolt import openapi_config
 api = BoltAPI(openapi_config=openapi_config)
 
 
-@api.get('/')
+@api.get("/")
 async def hello():
-    return {'message': 'Hello, World!'}
+    return {"message": "Hello, World!"}
