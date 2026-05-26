@@ -26,8 +26,8 @@ class ProcessorViewSet(ModelViewSet):
         """
         return await super().list(request)
 
-    async def retrieve(self, request, **kwargs) -> ProcessorSerializer:
+    async def retrieve(self, request) -> ProcessorSerializer:
         """Возвращает процессор по id.
         Детальная информация о процессоре.
         """
-        return await super().retrieve(request, **kwargs)
+        return await super().retrieve(request)
