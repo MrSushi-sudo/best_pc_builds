@@ -16,6 +16,7 @@ base_settings = [
     "components/auth.py",
     "components/database.py",
     "components/bolt.py",
+    "components/services.py",
 ]
 
 include(*base_settings)
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     "apps.best_pc_builds",
     "apps.users",
     "apps.components",
+    "apps.offers",
     "django_bolt",
 ]
 

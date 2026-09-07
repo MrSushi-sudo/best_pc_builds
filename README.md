@@ -5,18 +5,18 @@
 - REST API: **Django Bolt**
 - API Documentation: **Swagger**
 - Storage: **PostgresSQL**
-- Worker: **Celery**
-- Message broker: **RabbitMQ**
-- Broker Result: **Redis**
+- Worker / Scheduler: **Taskiq**
+- Message broker: **Redis Streams**
 - PM: **uv**
 
 ## Структура проекта
 - `best_pc_builds` - основное приложение
 - `users` - пользовательское приложение
+- `components` - приложение с данными комплектующих
+- `offers` - приложение с предложениями на маркетплейсах
 
 ## Запуск проекта
 - `uv venv` - создать окружение
-- `uv install` - установка пакетов
 - `uv sync` - синхронизация окружения
 - `python manage.py runbolt --dev --host 127.0.0.1 --port 8000` - запуск локально в дев режиме
 - `python manage.py runbolt --processes 4 --workers 2` - запуск в прод режиме
