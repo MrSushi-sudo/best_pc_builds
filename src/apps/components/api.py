@@ -1,6 +1,6 @@
 from typing import List
 
-from django_bolt import ModelViewSet
+from django_bolt import ModelViewSet, Request
 
 from apps.best_pc_builds.api import api
 from apps.components.models import Processor
@@ -20,14 +20,10 @@ class ProcessorViewSet(ModelViewSet):
     queryset = Processor.objects.all()
     serializer_class = ProcessorSerializer
 
-    async def list(self, request) -> List[ProcessorSerializer]:
-        """Список процессоров.
-        Возвращает список процессоров.
-        """
+    async def list(self, request: Request) -> List[ProcessorSerializer]:
+        """Список процессоров. Возвращает список процессоров."""
         return await super().list(request)
 
-    async def retrieve(self, request) -> ProcessorSerializer:
-        """Возвращает процессор по id.
-        Детальная информация о процессоре.
-        """
+    async def retrieve(self, request: Request) -> ProcessorSerializer:
+        """Возвращает процессор по id. Детальная информация о процессоре."""
         return await super().retrieve(request)

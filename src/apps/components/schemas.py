@@ -1,12 +1,15 @@
+from uuid import UUID
+
 from django_bolt.serializers import Serializer
 
 
 class BaseComponentSerializer(Serializer):
     """Сериализатор для базовых компонентов"""
 
+    id: UUID
     name: str
     manufacturer: str
-    price: float
+    price: float | None
 
 
 class ProcessorSerializer(BaseComponentSerializer):
@@ -16,5 +19,5 @@ class ProcessorSerializer(BaseComponentSerializer):
     cores: int
     threads: int
     base_clock: float
-    turbo_clock: int
+    turbo_clock: float
     tdp: int
