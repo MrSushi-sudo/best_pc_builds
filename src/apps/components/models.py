@@ -42,6 +42,9 @@ class Processor(BaseComponent):
         verbose_name_plural = _("Процессоры")
         ordering = ("-created",)
 
+    def __str__(self) -> str:
+        return f"{self.manufacturer} {self.name}".strip()
+
 
 class Motherboard(BaseComponent):
     """Модель мат.плат"""
@@ -58,6 +61,9 @@ class Motherboard(BaseComponent):
         verbose_name_plural = _("Материнские платы")
         ordering = ("-created",)
 
+    def __str__(self) -> str:
+        return f"{self.manufacturer} {self.name}".strip()
+
 
 class VideoCard(BaseComponent):
     """Модель видеокарт"""
@@ -72,6 +78,9 @@ class VideoCard(BaseComponent):
         verbose_name = _("Видеокарта")
         verbose_name_plural = _("Видеокарты")
         ordering = ("-created",)
+
+    def __str__(self) -> str:
+        return f"{self.manufacturer} {self.name}".strip()
 
 
 class Ram(BaseComponent):
@@ -88,6 +97,9 @@ class Ram(BaseComponent):
         verbose_name_plural = _("Оперативная память")
         ordering = ("-created",)
 
+    def __str__(self) -> str:
+        return f"{self.manufacturer} {self.name}".strip()
+
 
 class Storage(BaseComponent):
     """Модель накопителей"""
@@ -103,6 +115,9 @@ class Storage(BaseComponent):
         verbose_name_plural = _("Накопители")
         ordering = ("-created",)
 
+    def __str__(self) -> str:
+        return f"{self.manufacturer} {self.name}".strip()
+
 
 class PowerSupply(BaseComponent):
     """Модель блоков питания"""
@@ -117,6 +132,9 @@ class PowerSupply(BaseComponent):
         verbose_name_plural = _("Блоки питания")
         ordering = ("-created",)
 
+    def __str__(self) -> str:
+        return f"{self.manufacturer} {self.name}".strip()
+
 
 class ComputerCase(BaseComponent):
     """Модель корпусов"""
@@ -129,6 +147,9 @@ class ComputerCase(BaseComponent):
         verbose_name = _("Корпус")
         verbose_name_plural = _("Корпуса")
         ordering = ("-created",)
+
+    def __str__(self) -> str:
+        return f"{self.manufacturer} {self.name}".strip()
 
 
 class CoolingSystem(BaseComponent):
@@ -143,3 +164,6 @@ class CoolingSystem(BaseComponent):
         verbose_name = _("Система охлаждения")
         verbose_name_plural = _("Системы охлаждения")
         ordering = ("-created",)
+
+    def __str__(self) -> str:
+        return f"{self.manufacturer} {self.name}".strip()

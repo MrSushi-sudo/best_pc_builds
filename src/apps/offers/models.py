@@ -13,6 +13,7 @@ class MarketplaceChoices(models.TextChoices):
     WILDBERRIES = "WILDBERRIES", _("Wildberries")
     OZON = "OZON", _("Ozon")
     YANDEX_MARKET = "YANDEX_MARKET", _("Яндекс Маркет")
+    DNS = "DNS", _("DNS")
 
 
 class OfferStatusChoices(models.TextChoices):
@@ -27,11 +28,7 @@ class OfferStatusChoices(models.TextChoices):
 class MarketplaceOffer(UUID8Mixin, TimeStampedMixin, ActiveMixin):
     """Оффер комплектующего на конкретном маркетплейсе."""
 
-    component_content_type = models.ForeignKey(
-        to=ContentType,
-        verbose_name=_("Тип комплектующего"),
-        on_delete=models.CASCADE,
-    )
+    component_content_type = models.ForeignKey(to=ContentType, verbose_name=_("Тип комплектующего"), on_delete=models.CASCADE)
     component_object_id = models.UUIDField(verbose_name=_("id комплектующего"), db_index=True)
     component = GenericForeignKey("component_content_type", "component_object_id")
 
