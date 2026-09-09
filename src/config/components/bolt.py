@@ -13,5 +13,5 @@ openapi_config = OpenAPIConfig(
     render_plugins=[
         SwaggerRenderPlugin(path="/"),
     ],
-    servers=None,
+    servers=[],
 )
